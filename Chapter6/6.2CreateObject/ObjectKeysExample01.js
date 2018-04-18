@@ -9,7 +9,7 @@ Person.prototype.sayName =function(){
 };
 
 var keys = Object.keys(Person.prototype);
-console.log(keys); //Array(4) ["name", "age", "job", "sayName"]
+console.log(keys);       //Array(4) ["name", "age", "job", "sayName"]
 
 var person1 = new Person();
 person1.name = "Rob";
@@ -18,4 +18,4 @@ var person1Keys = Object.keys(person1);
 console.log(person1Keys); //Array(2) ["name", "age"]
 
 var allKeys =Object.getOwnPropertyNames(Person.prototype);
-console.log(allKeys);
+console.log(allKeys);    //Array(5) ["constructor", "name", "age", "job", "sayName"]
