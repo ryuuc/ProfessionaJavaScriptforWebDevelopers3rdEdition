@@ -1,8 +1,8 @@
-//寄生组合式继承
+//寄生组合式继承，最理想
 function inheritPrototype(subType,superType){
-    var prototype = Object(superType.prototype);
-    prototype.constructor= subType;
-    subType.prototype = prototype;
+    var prototype = Object(superType.prototype);//创建对象
+    prototype.constructor= subType; //增强对象
+    subType.prototype = prototype; //指定对象
 }
 
 function SuperType(name){
@@ -22,4 +22,5 @@ function SubType(name,age){
 inheritPrototype(SubType,SuperType);
 SubType.prototype.sayAge =function(){
     console.log(this.age);
-}
+};
+

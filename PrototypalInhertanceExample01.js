@@ -1,3 +1,4 @@
+//原型式继承
 var person ={
     name:"Nick",
     friends:["Shely","Court"]
@@ -32,9 +33,3 @@ var person2 = {
 var anotherPerson = createAnotherPerson(person2);
 anotherPerson.sayHi();
 
-//寄生组合式继承
-function inheritPrototype(subType,superType){
-    var prototype = Object(superType.prototype);
-    prototype.constructor= subType;
-    subType.prototype = prototype;
-}
