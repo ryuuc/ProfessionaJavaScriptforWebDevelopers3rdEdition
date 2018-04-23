@@ -33,7 +33,7 @@ var object={
         };
     }
 }
-
+//非严格模式下
 console.log(object.getNameFunc()()); //The window
 
 
@@ -46,4 +46,4 @@ var object1 = {
         }
     }
 }
-console.log(object1.getNameFunc()());
+console.log(object1.getNameFunc()()); //My object
